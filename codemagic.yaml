@@ -1,0 +1,24 @@
+workflows:
+  ios-release:
+    name: INDETAIL iOS Release
+    max_build_duration: 60
+    instance_type: mac_mini_m1
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      vars:
+        SUPABASE_URL: 'https://hulfgxqbdliaxulqjunj.supabase.co'
+        SUPABASE_ANON_KEY: 'sb_publishable_a8j5H4qN5qAFE9j5a6Yqdw_YBSxMUEa'
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+      - name: Build iOS IPA
+        script: |
+          flutter build ipa --release --no-codesign \
+            --dart-define=SUPABASE_URL="$SUPABASE_URL" \
+            --dart-define=SUPABASE_ANON_KEY="$SUPABASE_ANON_KEY"
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /Users/builder/clone/build/ios/ipa/*.ipa

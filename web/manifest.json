@@ -1,0 +1,35 @@
+{
+    "name": "INDETAIL",
+    "short_name": "INDETAIL",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#F8F6F1",
+    "theme_color": "#183B63",
+    "description": "INDETAIL office workspace for projects, teams, reports and verified attendance.",
+    "orientation": "any",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
